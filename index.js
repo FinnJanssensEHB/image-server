@@ -7,6 +7,10 @@ var http = require("http"),
 
 var image = "";
 
+app.get("/", (req, res) => {
+  res.send("Image server is up");
+});
+
 app.get("/image/:imageId", (req, res) => {
   image = req.params.imageId;
   http
